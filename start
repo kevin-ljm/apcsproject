@@ -1,0 +1,18 @@
+class Game {
+  def initialize(height, width) {
+    self.height = height
+    self.width = width
+  }
+
+  def render() {
+    print "Height: " + self.height
+    print "Width: " + self.width
+  }
+}
+
+
+game = Game.new(10, 20)
+game.render()
+# =>
+# Height: 10
+# Width: 20
