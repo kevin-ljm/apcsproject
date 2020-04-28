@@ -4,36 +4,29 @@ class Game {
     self.width = width
   }
 
-  def render() {
-    print "Height: " + self.height
-    print "Width: " + self.width
+  def loading() {
+    print "Width: " + self.width;
+    print "Height: " + self.height;
     matrix = self.board_matrix()
   }
 }
 
-
-game = Game.new(10, 20)
-game.render()
+game = Game.new(20, 40)
 # =>
-# Height: 10
-# Width: 20
+# Height: 20
+# Width: 40
 
 class Snake {
-
   def initialize(init_body, init_direction) {
     self.body = init_body
-    self.direction = init_direction
-  }
-
-  def take_step(position) {
-    self.body = self.body[1:] + [position]
+    self.direction = init_direction;
   }
 
   def set_direction(direction) {
-    self.direction = direction
+    self.direction = direction;
   }
 
   def head() {
-    return self.body[-1]
+    return self.body;
   }
 }
