@@ -7,6 +7,7 @@ class Game {
   def render() {
     print "Height: " + self.height
     print "Width: " + self.width
+    matrix = self.board_matrix()
   }
 }
 
@@ -16,3 +17,23 @@ game.render()
 # =>
 # Height: 10
 # Width: 20
+
+class Snake {
+
+  def initialize(init_body, init_direction) {
+    self.body = init_body
+    self.direction = init_direction
+  }
+
+  def take_step(position) {
+    self.body = self.body[1:] + [position]
+  }
+
+  def set_direction(direction) {
+    self.direction = direction
+  }
+
+  def head() {
+    return self.body[-1]
+  }
+}
